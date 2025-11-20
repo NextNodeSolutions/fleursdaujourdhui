@@ -1,0 +1,77 @@
+---
+import { CalendarHeart, Building2, Repeat } from 'lucide-react'
+import Section from './common/Section.astro'
+
+const services = [
+	{
+		icon: CalendarHeart,
+		title: 'Mariages',
+		description: 'Sublimez votre jour J avec des créations florales sur-mesure. De la boutonnière au bouquet de mariée, en passant par la décoration de votre lieu de réception.',
+		features: ['Consultation personnalisée', 'Essais bouquet mariée', 'Décoration complète', 'Livraison et installation'],
+		link: '/mariages',
+	},
+	{
+		icon: Building2,
+		title: 'Événementiel',
+		description: 'Vos événements professionnels et personnels méritent une touche florale exceptionnelle. Conférences, galas, anniversaires... nous créons l\'ambiance parfaite.',
+		features: ['Devis personnalisé', 'Volumes importants', 'Installation sur site', 'Service sur-mesure'],
+		link: '/evenementiel',
+	},
+	{
+		icon: Repeat,
+		title: 'Abonnements',
+		description: 'Recevez régulièrement vos créations florales à domicile ou au bureau. Égayez votre quotidien avec des compositions fraîches et uniques.',
+		features: ['Formule hebdo/mensuelle', 'Livraison incluse', 'Compositions variées', 'Sans engagement'],
+		link: '/abonnements',
+	},
+]
+---
+
+<Section background="rose" padding="large">
+	<div class="text-center">
+		<h2 class="section-title">Nos services</h2>
+		<p class="section-subtitle max-w-2xl mx-auto">
+			De l'événementiel aux abonnements, nous accompagnons tous vos projets floraux
+		</p>
+	</div>
+
+	<div class="mt-16 grid gap-8 lg:grid-cols-3">
+		{services.map((service) => (
+			<div class="group">
+				<div class="card h-full flex flex-col">
+					{/* Icon */}
+					<div class="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-full bg-rose-100 transition-colors group-hover:bg-rose-200">
+						<service.icon className="h-7 w-7 text-rose-600" />
+					</div>
+
+					{/* Content */}
+					<h3 class="font-serif text-2xl font-semibold text-gray-900 mb-3">{service.title}</h3>
+					<p class="text-gray-600 mb-6 flex-grow">{service.description}</p>
+
+					{/* Features */}
+					<ul class="space-y-2 mb-6">
+						{service.features.map((feature) => (
+							<li class="flex items-center text-sm text-gray-600">
+								<svg class="mr-2 h-4 w-4 text-sage-600" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+								</svg>
+								{feature}
+							</li>
+						))}
+					</ul>
+
+					{/* CTA */}
+					<a
+						href={service.link}
+						class="inline-flex items-center justify-center rounded-lg border-2 border-rose-300 px-6 py-3 font-medium text-rose-700 transition-all duration-200 hover:bg-rose-50 hover:border-rose-400"
+					>
+						En savoir plus
+						<svg class="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+						</svg>
+					</a>
+				</div>
+			</div>
+		))}
+	</div>
+</Section>

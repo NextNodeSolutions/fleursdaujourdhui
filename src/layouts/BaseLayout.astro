@@ -9,7 +9,7 @@ export interface Props {
 
 const {
 	title,
-	description = 'Template moderne et performant créé avec Astro et Nextnode',
+	description = 'Fleurs d\'Aujourd\'hui - Fleuriste artisan à Gonesse. Bouquets uniques créés avec passion.',
 	image = '/og-image.png',
 } = Astro.props
 
@@ -48,11 +48,11 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site)
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
 			rel="stylesheet"
 		/>
 	</head>
-	<body class="bg-white font-sans text-gray-900 antialiased">
+	<body class="bg-cream-50 font-sans text-gray-900 antialiased">
 		<slot />
 	</body>
 </html>

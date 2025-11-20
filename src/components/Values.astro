@@ -1,0 +1,55 @@
+---
+import { Heart, Leaf, Sparkles } from 'lucide-react'
+import Section from './common/Section.astro'
+
+const values = [
+	{
+		icon: Heart,
+		title: 'Passion',
+		description: 'Chaque bouquet est créé avec amour et dévouement. Notre passion pour l\'art floral transparaît dans chaque composition.',
+	},
+	{
+		icon: Sparkles,
+		title: 'Authenticité',
+		description: 'Nous valorisons l\'unique et le fait-main. Pas de production de masse, seulement des créations originales et personnalisées.',
+	},
+	{
+		icon: Leaf,
+		title: 'Sur-mesure',
+		description: 'Votre bouquet est pensé pour vous, selon vos goûts et l\'occasion. Une création qui vous ressemble, vraiment.',
+	},
+]
+---
+
+<Section background="white" padding="large">
+	<div class="text-center">
+		<h2 class="section-title">Nos valeurs</h2>
+		<p class="section-subtitle max-w-2xl mx-auto">
+			L'artisanat floral dans toute sa splendeur
+		</p>
+	</div>
+
+	<div class="mt-16 grid gap-12 md:grid-cols-3">
+		{values.map((value) => (
+			<div class="text-center">
+				<div class="mx-auto mb-6 inline-flex h-16 w-16 items-center justify-center rounded-full bg-rose-100">
+					<value.icon className="h-8 w-8 text-rose-600" />
+				</div>
+				<h3 class="font-serif text-2xl font-semibold text-gray-900 mb-4">{value.title}</h3>
+				<p class="text-gray-600 leading-relaxed">{value.description}</p>
+			</div>
+		))}
+	</div>
+
+	{/* Citation */}
+	<div class="mt-20 mx-auto max-w-3xl">
+		<blockquote class="border-l-4 border-rose-300 pl-6 italic text-gray-700">
+			<p class="text-xl md:text-2xl font-light">
+				"Un bouquet ne se reproduit jamais. Comme un instant précieux, il est unique et éphémère. C'est toute la beauté de notre métier."
+			</p>
+			<footer class="mt-4 text-right text-sm not-italic text-gray-600">
+				— L'équipe Fleurs d'Aujourd'hui
+			</footer>
+		</blockquote>
+	</div>
+</Section>

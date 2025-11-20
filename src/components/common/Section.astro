@@ -1,0 +1,36 @@
+---
+export interface Props {
+	id?: string
+	class?: string
+	background?: 'cream' | 'white' | 'rose'
+	padding?: 'normal' | 'large' | 'none'
+}
+
+const { id, class: className, background = 'cream', padding = 'normal' } = Astro.props
+
+const backgroundClasses = {
+	cream: 'bg-cream-50',
+	white: 'bg-white',
+	rose: 'bg-rose-50',
+}
+
+const paddingClasses = {
+	normal: 'py-16 md:py-24',
+	large: 'py-24 md:py-32 lg:py-40',
+	none: '',
+}
+---
+
+<section
+	id={id}
+	class:list={[
+		'relative overflow-hidden',
+		backgroundClasses[background],
+		paddingClasses[padding],
+		className,
+	]}
+>
+	<div class="container-padding mx-auto max-w-7xl">
+		<slot />
+	</div>
+</section>
