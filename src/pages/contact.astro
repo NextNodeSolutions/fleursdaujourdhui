@@ -1,0 +1,420 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+import Section from '../components/common/Section.astro'
+import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react'
+
+const contactInfo = [
+	{
+		icon: MapPin,
+		title: 'Notre boutique',
+		details: ['123 Avenue de la République', '95500 Gonesse', 'France'],
+	},
+	{
+		icon: Phone,
+		title: 'Téléphone',
+		details: ['+33 1 23 45 67 89', 'Du lundi au samedi', '9h - 19h'],
+	},
+	{
+		icon: Mail,
+		title: 'Email',
+		details: ['contact@fleursdaujourdhui.fr', 'Réponse sous 24h'],
+	},
+	{
+		icon: Clock,
+		title: 'Horaires',
+		details: [
+			'Lundi - Samedi: 9h - 19h',
+			'Dimanche: 9h - 13h',
+			'Fermé les jours fériés',
+		],
+	},
+]
+---
+
+<BaseLayout
+	title="Contact - Fleurs d'Aujourd'hui | Fleuriste à Gonesse"
+	description="Contactez-nous pour vos projets floraux. Boutique à Gonesse, service personnalisé. Mariages, événements, abonnements."
+>
+	<Header />
+
+	<main class="pt-20">
+		<!-- Hero Section -->
+		<Section background="white" padding="large">
+			<div class="mx-auto max-w-4xl text-center">
+				<div
+					class="mb-6 inline-flex items-center gap-2 rounded-full bg-rose-100 px-4 py-2 text-sm font-medium text-rose-700"
+				>
+					<Mail className="h-4 w-4" />
+					Contact
+				</div>
+				<h1
+					class="mb-6 font-serif text-5xl font-bold text-gray-900 md:text-6xl"
+				>
+					Parlons de votre <span class="gradient-text"
+						>projet floral</span
+					>
+				</h1>
+				<p class="mb-10 text-xl leading-relaxed text-gray-600">
+					Une question, un projet, une demande de devis ? Notre équipe
+					est à votre écoute pour donner vie à vos idées florales.
+				</p>
+			</div>
+		</Section>
+
+		<!-- Contact Form & Info Section -->
+		<Section background="rose" padding="large">
+			<div class="grid gap-12 lg:grid-cols-5">
+				<!-- Contact Form -->
+				<div class="lg:col-span-3">
+					<div class="card">
+						<h2
+							class="mb-6 font-serif text-3xl font-bold text-gray-900"
+						>
+							Envoyez-nous un message
+						</h2>
+
+						<form class="space-y-6">
+							<div class="grid gap-6 sm:grid-cols-2">
+								<div>
+									<label
+										for="firstname"
+										class="mb-2 block text-sm font-medium text-gray-700"
+									>
+										Prénom *
+									</label>
+									<input
+										type="text"
+										id="firstname"
+										name="firstname"
+										required
+										class="w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-900 transition-colors focus:border-rose-500 focus:ring-2 focus:ring-rose-200 focus:outline-none"
+										placeholder="Jean"
+									/>
+								</div>
+
+								<div>
+									<label
+										for="lastname"
+										class="mb-2 block text-sm font-medium text-gray-700"
+									>
+										Nom *
+									</label>
+									<input
+										type="text"
+										id="lastname"
+										name="lastname"
+										required
+										class="w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-900 transition-colors focus:border-rose-500 focus:ring-2 focus:ring-rose-200 focus:outline-none"
+										placeholder="Dupont"
+									/>
+								</div>
+							</div>
+
+							<div class="grid gap-6 sm:grid-cols-2">
+								<div>
+									<label
+										for="email"
+										class="mb-2 block text-sm font-medium text-gray-700"
+									>
+										Email *
+									</label>
+									<input
+										type="email"
+										id="email"
+										name="email"
+										required
+										class="w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-900 transition-colors focus:border-rose-500 focus:ring-2 focus:ring-rose-200 focus:outline-none"
+										placeholder="jean.dupont@example.com"
+									/>
+								</div>
+
+								<div>
+									<label
+										for="phone"
+										class="mb-2 block text-sm font-medium text-gray-700"
+									>
+										Téléphone
+									</label>
+									<input
+										type="tel"
+										id="phone"
+										name="phone"
+										class="w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-900 transition-colors focus:border-rose-500 focus:ring-2 focus:ring-rose-200 focus:outline-none"
+										placeholder="+33 1 23 45 67 89"
+									/>
+								</div>
+							</div>
+
+							<div>
+								<label
+									for="subject"
+									class="mb-2 block text-sm font-medium text-gray-700"
+								>
+									Sujet *
+								</label>
+								<select
+									id="subject"
+									name="subject"
+									required
+									class="w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-900 transition-colors focus:border-rose-500 focus:ring-2 focus:ring-rose-200 focus:outline-none"
+								>
+									<option value=""
+										>Sélectionnez un sujet</option
+									>
+									<option value="mariage">Mariage</option>
+									<option value="evenement">Événement</option>
+									<option value="abonnement"
+										>Abonnement</option
+									>
+									<option value="bouquet"
+										>Bouquet personnalisé</option
+									>
+									<option value="autre">Autre demande</option>
+								</select>
+							</div>
+
+							<div>
+								<label
+									for="message"
+									class="mb-2 block text-sm font-medium text-gray-700"
+								>
+									Message *
+								</label>
+								<textarea
+									id="message"
+									name="message"
+									rows="6"
+									required
+									class="w-full resize-none rounded-lg border border-gray-300 px-4 py-3 text-gray-900 transition-colors focus:border-rose-500 focus:ring-2 focus:ring-rose-200 focus:outline-none"
+									placeholder="Décrivez votre projet ou votre demande..."
+								></textarea>
+							</div>
+
+							<div class="flex items-start gap-3">
+								<input
+									type="checkbox"
+									id="consent"
+									name="consent"
+									required
+									class="mt-1 h-4 w-4 rounded border-gray-300 text-rose-600 focus:ring-rose-500"
+								/>
+								<label
+									for="consent"
+									class="text-sm text-gray-600"
+								>
+									J'accepte que mes données soient utilisées
+									pour traiter ma demande. Conformément au
+									RGPD, vous pouvez exercer vos droits à tout
+									moment. *
+								</label>
+							</div>
+
+							<button
+								type="submit"
+								class="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-rose-600 to-rose-500 px-8 py-4 text-lg font-medium text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
+							>
+								<Send className="mr-2 h-5 w-5" />
+								Envoyer le message
+							</button>
+
+							<p class="text-sm text-gray-500">
+								* Champs obligatoires
+							</p>
+						</form>
+					</div>
+				</div>
+
+				<!-- Contact Info -->
+				<div class="space-y-6 lg:col-span-2">
+					{
+						contactInfo.map(info => (
+							<div class="card">
+								<div class="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-rose-100 to-rose-50">
+									<info.icon className="h-6 w-6 text-rose-600" />
+								</div>
+								<h3 class="mb-3 font-serif text-xl font-semibold text-gray-900">
+									{info.title}
+								</h3>
+								<div class="space-y-1">
+									{info.details.map(detail => (
+										<p class="text-gray-600">{detail}</p>
+									))}
+								</div>
+							</div>
+						))
+					}
+
+					{/* Social Media */}
+					<div class="card">
+						<h3
+							class="mb-4 font-serif text-xl font-semibold text-gray-900"
+						>
+							Suivez-nous
+						</h3>
+						<div class="flex gap-4">
+							<a
+								href="https://instagram.com"
+								target="_blank"
+								rel="noopener noreferrer"
+								class="flex h-12 w-12 items-center justify-center rounded-lg bg-gradient-to-br from-rose-100 to-rose-50 text-rose-600 transition-all duration-200 hover:scale-110 hover:shadow-lg"
+								aria-label="Instagram"
+							>
+								<svg
+									class="h-6 w-6"
+									fill="currentColor"
+									viewBox="0 0 24 24"
+								>
+									<path
+										d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+									></path>
+								</svg>
+							</a>
+							<a
+								href="https://facebook.com"
+								target="_blank"
+								rel="noopener noreferrer"
+								class="flex h-12 w-12 items-center justify-center rounded-lg bg-gradient-to-br from-rose-100 to-rose-50 text-rose-600 transition-all duration-200 hover:scale-110 hover:shadow-lg"
+								aria-label="Facebook"
+							>
+								<svg
+									class="h-6 w-6"
+									fill="currentColor"
+									viewBox="0 0 24 24"
+								>
+									<path
+										d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+									></path>
+								</svg>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</Section>
+
+		<!-- Map Section -->
+		<Section background="white" padding="large">
+			<div class="mb-12 text-center">
+				<h2 class="section-title">Nous trouver</h2>
+				<p class="section-subtitle mx-auto max-w-2xl">
+					Notre boutique à Gonesse
+				</p>
+			</div>
+
+			<div class="overflow-hidden rounded-2xl shadow-xl">
+				<div
+					class="relative aspect-[16/9] bg-gray-200 lg:aspect-[21/9]"
+				>
+					<iframe
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d83998.94722698308!2d2.354244!3d48.856614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e1f06e2b005%3A0x40b82c3688c9460!2sGonesse%2C%20France!5e0!3m2!1sen!2s!4v1234567890"
+						width="100%"
+						height="100%"
+						style="border:0;"
+						allowfullscreen=""
+						loading="lazy"
+						referrerpolicy="no-referrer-when-downgrade"
+						title="Localisation Fleurs d'Aujourd'hui à Gonesse"
+						class="absolute inset-0"></iframe>
+				</div>
+			</div>
+
+			<div class="mt-8 text-center">
+				<p class="mb-4 text-gray-600">
+					Parking gratuit disponible à proximité • Accessible en
+					transports en commun
+				</p>
+			</div>
+		</Section>
+
+		<!-- Quick Actions Section -->
+		<Section background="rose" padding="large">
+			<div class="mx-auto max-w-5xl">
+				<div class="grid gap-6 md:grid-cols-3">
+					<a
+						href="tel:+33123456789"
+						class="card group transition-all hover:border-rose-300"
+					>
+						<Phone className="mb-4 h-10 w-10 text-rose-600" />
+						<h3
+							class="mb-2 font-serif text-xl font-semibold text-gray-900"
+						>
+							Appelez-nous
+						</h3>
+						<p class="mb-3 text-gray-600">
+							Pour une réponse immédiate
+						</p>
+						<span
+							class="font-medium text-rose-600 group-hover:underline"
+						>
+							+33 1 23 45 67 89
+						</span>
+					</a>
+
+					<a
+						href="mailto:contact@fleursdaujourdhui.fr"
+						class="card group transition-all hover:border-rose-300"
+					>
+						<Mail className="mb-4 h-10 w-10 text-rose-600" />
+						<h3
+							class="mb-2 font-serif text-xl font-semibold text-gray-900"
+						>
+							Envoyez un email
+						</h3>
+						<p class="mb-3 text-gray-600">Réponse sous 24h</p>
+						<span
+							class="font-medium text-rose-600 group-hover:underline"
+						>
+							contact@fleursdaujourdhui.fr
+						</span>
+					</a>
+
+					<a
+						href="https://instagram.com"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="card group transition-all hover:border-rose-300"
+					>
+						<svg
+							class="mb-4 h-10 w-10 text-rose-600"
+							fill="currentColor"
+							viewBox="0 0 24 24"
+						>
+							<path
+								d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+							></path>
+						</svg>
+						<h3
+							class="mb-2 font-serif text-xl font-semibold text-gray-900"
+						>
+							Suivez-nous
+						</h3>
+						<p class="mb-3 text-gray-600">
+							Nos créations au quotidien
+						</p>
+						<span
+							class="font-medium text-rose-600 group-hover:underline"
+						>
+							@fleursdaujourdhui
+						</span>
+					</a>
+				</div>
+			</div>
+		</Section>
+	</main>
+
+	<Footer />
+</BaseLayout>
+
+<script>
+	const form = document.querySelector('form')
+
+	form?.addEventListener('submit', e => {
+		e.preventDefault()
+		alert(
+			'Merci pour votre message ! Nous vous répondrons dans les plus brefs délais.',
+		)
+		form.reset()
+	})
+</script>
