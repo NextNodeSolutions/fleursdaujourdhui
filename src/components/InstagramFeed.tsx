@@ -1,16 +1,38 @@
 import { Instagram } from 'lucide-react'
 
-import { Button } from './ui/Button'
-
 const instagramPosts = [
-	{ id: 1, image: 'https://images.unsplash.com/photo-1503652601-557d07733ddc?q=80&w=600&auto=format&fit=crop' },
-	{ id: 2, image: 'https://images.unsplash.com/photo-1455659817273-f96807779a8a?q=80&w=600&auto=format&fit=crop' },
-	{ id: 3, image: 'https://images.unsplash.com/photo-1518709766631-a6a7f45921c3?q=80&w=600&auto=format&fit=crop' },
-	{ id: 4, image: 'https://images.unsplash.com/photo-1502307664-6e36a6a1335a?q=80&w=600&auto=format&fit=crop' },
-	{ id: 5, image: 'https://images.unsplash.com/photo-1488825497257-c61903f9c8b7?q=80&w=600&auto=format&fit=crop' },
-	{ id: 6, image: 'https://images.unsplash.com/photo-1508784411316-02b8cd4d3a3a?q=80&w=600&auto=format&fit=crop' },
-	{ id: 7, image: 'https://images.unsplash.com/photo-1496062031456-07b8f162a322?q=80&w=600&auto=format&fit=crop' },
-	{ id: 8, image: 'https://images.unsplash.com/photo-1517849845537-4d257902454a?q=80&w=600&auto=format&fit=crop' },
+	{
+		id: 1,
+		image: 'https://images.unsplash.com/photo-1503652601-557d07733ddc?q=80&w=600&auto=format&fit=crop',
+	},
+	{
+		id: 2,
+		image: 'https://images.unsplash.com/photo-1455659817273-f96807779a8a?q=80&w=600&auto=format&fit=crop',
+	},
+	{
+		id: 3,
+		image: 'https://images.unsplash.com/photo-1518709766631-a6a7f45921c3?q=80&w=600&auto=format&fit=crop',
+	},
+	{
+		id: 4,
+		image: 'https://images.unsplash.com/photo-1502307664-6e36a6a1335a?q=80&w=600&auto=format&fit=crop',
+	},
+	{
+		id: 5,
+		image: 'https://images.unsplash.com/photo-1488825497257-c61903f9c8b7?q=80&w=600&auto=format&fit=crop',
+	},
+	{
+		id: 6,
+		image: 'https://images.unsplash.com/photo-1508784411316-02b8cd4d3a3a?q=80&w=600&auto=format&fit=crop',
+	},
+	{
+		id: 7,
+		image: 'https://images.unsplash.com/photo-1496062031456-07b8f162a322?q=80&w=600&auto=format&fit=crop',
+	},
+	{
+		id: 8,
+		image: 'https://images.unsplash.com/photo-1517849845537-4d257902454a?q=80&w=600&auto=format&fit=crop',
+	},
 ]
 
 export function InstagramFeed() {
@@ -27,7 +49,7 @@ export function InstagramFeed() {
 				{instagramPosts.map((post, index) => (
 					<div
 						key={post.id}
-						className="group relative overflow-hidden rounded-lg aspect-square"
+						className="group relative aspect-square overflow-hidden rounded-lg"
 					>
 						<img
 							src={post.image}
@@ -42,15 +64,15 @@ export function InstagramFeed() {
 			</div>
 
 			<div className="text-center">
-				<Button
-					client:load
-					size="lg"
-					variant="outline"
-					onClick={() => window.open('https://instagram.com', '_blank')}
+				<a
+					href="https://instagram.com"
+					target="_blank"
+					rel="noopener noreferrer"
+					className="inline-flex items-center gap-2 rounded-lg border-2 border-rose-300 px-8 py-4 text-lg font-medium text-rose-700 transition-all duration-200 hover:border-rose-400 hover:bg-rose-50"
 				>
-					<Instagram className="mr-2 h-5 w-5" />
+					<Instagram className="h-5 w-5" />
 					Voir notre Instagram
-				</Button>
+				</a>
 			</div>
 		</div>
 	)

@@ -10,7 +10,8 @@ const packages = [
 	{
 		name: 'Essentiel',
 		price: 'À partir de 600€',
-		description: 'L\'essentiel pour votre jour J avec des créations florales élégantes',
+		description:
+			"L'essentiel pour votre jour J avec des créations florales élégantes",
 		features: [
 			'Bouquet de mariée unique',
 			'Boutonnière du marié',
@@ -22,7 +23,7 @@ const packages = [
 		name: 'Premium',
 		price: 'À partir de 1200€',
 		popular: true,
-		description: 'L\'offre complète pour un mariage inoubliable',
+		description: "L'offre complète pour un mariage inoubliable",
 		features: [
 			'Bouquet de mariée + essai',
 			'Boutonnières mariés & témoins',
@@ -85,21 +86,28 @@ const gallery = [
 		<!-- Hero Section -->
 		<Section background="rose" padding="large">
 			<div class="mx-auto max-w-4xl text-center">
-				<div class="mb-6 inline-flex items-center gap-2 rounded-full bg-white/50 backdrop-blur-sm px-4 py-2 text-sm font-medium text-rose-700">
+				<div
+					class="mb-6 inline-flex items-center gap-2 rounded-full bg-white/50 px-4 py-2 text-sm font-medium text-rose-700 backdrop-blur-sm"
+				>
 					<Heart className="h-4 w-4" />
 					Mariages
 				</div>
-				<h1 class="font-serif text-5xl font-bold text-gray-900 mb-6 md:text-6xl lg:text-7xl">
-					Des fleurs uniques pour un jour <span class="gradient-text">inoubliable</span>
+				<h1
+					class="mb-6 font-serif text-5xl font-bold text-gray-900 md:text-6xl lg:text-7xl"
+				>
+					Des fleurs uniques pour un jour <span class="gradient-text"
+						>inoubliable</span
+					>
 				</h1>
-				<p class="text-xl text-gray-600 mb-10 leading-relaxed">
-					Votre mariage mérite des créations florales aussi uniques que votre histoire d'amour.
-					Chaque composition est pensée pour vous, créée avec passion, et ne sera jamais reproduite.
+				<p class="mb-10 text-xl leading-relaxed text-gray-600">
+					Votre mariage mérite des créations florales aussi uniques
+					que votre histoire d'amour. Chaque composition est pensée
+					pour vous, créée avec passion, et ne sera jamais reproduite.
 				</p>
-				<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-					<Button client:load size="lg">
-						Demander un devis
-					</Button>
+				<div
+					class="flex flex-col items-center justify-center gap-4 sm:flex-row"
+				>
+					<Button client:load size="lg"> Demander un devis </Button>
 					<Button client:load variant="outline" size="lg">
 						Voir nos créations
 					</Button>
@@ -109,51 +117,92 @@ const gallery = [
 
 		<!-- Process Section -->
 		<Section background="white" padding="large">
-			<div class="text-center mb-16">
+			<div class="mb-16 text-center">
 				<h2 class="section-title">Notre accompagnement</h2>
-				<p class="section-subtitle max-w-2xl mx-auto">
-					Un processus simple et personnalisé pour créer le mariage de vos rêves
+				<p class="section-subtitle mx-auto max-w-2xl">
+					Un processus simple et personnalisé pour créer le mariage de
+					vos rêves
 				</p>
 			</div>
 
 			<div class="grid gap-8 md:grid-cols-4">
 				<div class="text-center">
-					<div class="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-rose-100 to-rose-50">
-						<span class="font-serif text-2xl font-bold text-rose-600">1</span>
+					<div
+						class="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-rose-100 to-rose-50"
+					>
+						<span
+							class="font-serif text-2xl font-bold text-rose-600"
+							>1</span
+						>
 					</div>
-					<h3 class="font-serif text-xl font-semibold text-gray-900 mb-3">Consultation</h3>
+					<h3
+						class="mb-3 font-serif text-xl font-semibold text-gray-900"
+					>
+						Consultation
+					</h3>
 					<p class="text-gray-600">
-						Rencontre gratuite pour discuter de votre vision, vos goûts et votre budget
+						Rencontre gratuite pour discuter de votre vision, vos
+						goûts et votre budget
 					</p>
 				</div>
 
 				<div class="text-center">
-					<div class="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-rose-100 to-rose-50">
-						<span class="font-serif text-2xl font-bold text-rose-600">2</span>
+					<div
+						class="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-rose-100 to-rose-50"
+					>
+						<span
+							class="font-serif text-2xl font-bold text-rose-600"
+							>2</span
+						>
 					</div>
-					<h3 class="font-serif text-xl font-semibold text-gray-900 mb-3">Proposition</h3>
+					<h3
+						class="mb-3 font-serif text-xl font-semibold text-gray-900"
+					>
+						Proposition
+					</h3>
 					<p class="text-gray-600">
-						Création d'un moodboard et devis personnalisé selon vos envies
+						Création d'un moodboard et devis personnalisé selon vos
+						envies
 					</p>
 				</div>
 
 				<div class="text-center">
-					<div class="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-rose-100 to-rose-50">
-						<span class="font-serif text-2xl font-bold text-rose-600">3</span>
+					<div
+						class="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-rose-100 to-rose-50"
+					>
+						<span
+							class="font-serif text-2xl font-bold text-rose-600"
+							>3</span
+						>
 					</div>
-					<h3 class="font-serif text-xl font-semibold text-gray-900 mb-3">Essai</h3>
+					<h3
+						class="mb-3 font-serif text-xl font-semibold text-gray-900"
+					>
+						Essai
+					</h3>
 					<p class="text-gray-600">
-						Essai du bouquet de mariée pour valider ensemble le style final
+						Essai du bouquet de mariée pour valider ensemble le
+						style final
 					</p>
 				</div>
 
 				<div class="text-center">
-					<div class="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-rose-100 to-rose-50">
-						<span class="font-serif text-2xl font-bold text-rose-600">4</span>
+					<div
+						class="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-rose-100 to-rose-50"
+					>
+						<span
+							class="font-serif text-2xl font-bold text-rose-600"
+							>4</span
+						>
 					</div>
-					<h3 class="font-serif text-xl font-semibold text-gray-900 mb-3">Jour J</h3>
+					<h3
+						class="mb-3 font-serif text-xl font-semibold text-gray-900"
+					>
+						Jour J
+					</h3>
 					<p class="text-gray-600">
-						Livraison, installation et mise en place le jour de votre mariage
+						Livraison, installation et mise en place le jour de
+						votre mariage
 					</p>
 				</div>
 			</div>
@@ -161,56 +210,77 @@ const gallery = [
 
 		<!-- Packages Section -->
 		<Section background="rose" padding="large">
-			<div class="text-center mb-16">
+			<div class="mb-16 text-center">
 				<h2 class="section-title">Nos formules</h2>
-				<p class="section-subtitle max-w-2xl mx-auto">
+				<p class="section-subtitle mx-auto max-w-2xl">
 					Des packages flexibles adaptés à tous les budgets
 				</p>
 			</div>
 
 			<div class="grid gap-8 lg:grid-cols-3">
-				{packages.map((pkg) => (
-					<div class={`relative ${pkg.popular ? 'lg:scale-105' : ''}`}>
-						{pkg.popular && (
-							<div class="absolute -top-4 left-1/2 -translate-x-1/2">
-								<span class="inline-flex items-center gap-1 rounded-full bg-gradient-to-r from-rose-600 to-rose-500 px-4 py-1 text-sm font-medium text-white shadow-lg">
-									<Sparkles className="h-4 w-4" />
-									Le plus populaire
-								</span>
-							</div>
-						)}
-						<div class={`card h-full flex flex-col ${pkg.popular ? 'border-rose-300 shadow-xl' : ''}`}>
-							<div class="mb-6">
-								<h3 class="font-serif text-2xl font-bold text-gray-900 mb-2">{pkg.name}</h3>
-								<p class="text-3xl font-bold text-rose-600 mb-3">{pkg.price}</p>
-								<p class="text-gray-600">{pkg.description}</p>
-							</div>
-
-							<ul class="space-y-3 mb-8 flex-grow">
-								{pkg.features.map((feature) => (
-									<li class="flex items-start gap-3">
-										<Check className="h-5 w-5 text-sage-600 flex-shrink-0 mt-0.5" />
-										<span class="text-gray-700">{feature}</span>
-									</li>
-								))}
-							</ul>
-
-							<Button
-								client:load
-								variant={pkg.popular ? 'default' : 'outline'}
-								className="w-full"
+				{
+					packages.map(pkg => (
+						<div
+							class={`relative ${pkg.popular ? 'lg:scale-105' : ''}`}
+						>
+							{pkg.popular && (
+								<div class="absolute -top-4 left-1/2 -translate-x-1/2">
+									<span class="inline-flex items-center gap-1 rounded-full bg-gradient-to-r from-rose-600 to-rose-500 px-4 py-1 text-sm font-medium text-white shadow-lg">
+										<Sparkles className="h-4 w-4" />
+										Le plus populaire
+									</span>
+								</div>
+							)}
+							<div
+								class={`card flex h-full flex-col ${pkg.popular ? 'border-rose-300 shadow-xl' : ''}`}
 							>
-								Choisir cette formule
-							</Button>
+								<div class="mb-6">
+									<h3 class="mb-2 font-serif text-2xl font-bold text-gray-900">
+										{pkg.name}
+									</h3>
+									<p class="mb-3 text-3xl font-bold text-rose-600">
+										{pkg.price}
+									</p>
+									<p class="text-gray-600">
+										{pkg.description}
+									</p>
+								</div>
+
+								<ul class="mb-8 flex-grow space-y-3">
+									{pkg.features.map(feature => (
+										<li class="flex items-start gap-3">
+											<Check className="h-5 w-5 text-sage-600 flex-shrink-0 mt-0.5" />
+											<span class="text-gray-700">
+												{feature}
+											</span>
+										</li>
+									))}
+								</ul>
+
+								<Button
+									client:load
+									variant={
+										pkg.popular ? 'primary' : 'outline'
+									}
+									className="w-full"
+								>
+									Choisir cette formule
+								</Button>
+							</div>
 						</div>
-					</div>
-				))}
+					))
+				}
 			</div>
 
 			<div class="mt-12 text-center">
 				<p class="text-gray-600">
-					Toutes nos formules sont personnalisables selon vos besoins.{' '}
-					<a href="/contact" class="font-medium text-rose-700 hover:text-rose-800 underline">
+					Toutes nos formules sont personnalisables selon vos besoins.{
+						' '
+					}
+					<a
+						href="/contact"
+						class="font-medium text-rose-700 underline hover:text-rose-800"
+					>
 						Contactez-nous
 					</a>{' '}
 					pour un devis sur-mesure.
@@ -220,46 +290,59 @@ const gallery = [
 
 		<!-- Gallery Section -->
 		<Section background="white" padding="large">
-			<div class="text-center mb-16">
+			<div class="mb-16 text-center">
 				<h2 class="section-title">Nos créations</h2>
-				<p class="section-subtitle max-w-2xl mx-auto">
+				<p class="section-subtitle mx-auto max-w-2xl">
 					Quelques exemples de nos réalisations pour mariages
 				</p>
 			</div>
 
 			<div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-				{gallery.map((image) => (
-					<div class="group relative aspect-square overflow-hidden rounded-2xl shadow-lg transition-all duration-300 hover:shadow-2xl">
-						<img
-							src={image.src}
-							alt={image.alt}
-							class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-						/>
-						<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-							<div class="absolute bottom-0 left-0 right-0 p-6">
-								<p class="text-white font-medium">{image.alt}</p>
+				{
+					gallery.map(image => (
+						<div class="group relative aspect-square overflow-hidden rounded-2xl shadow-lg transition-all duration-300 hover:shadow-2xl">
+							<img
+								src={image.src}
+								alt={image.alt}
+								class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+							/>
+							<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+								<div class="absolute right-0 bottom-0 left-0 p-6">
+									<p class="font-medium text-white">
+										{image.alt}
+									</p>
+								</div>
 							</div>
 						</div>
-					</div>
-				))}
+					))
+				}
 			</div>
 		</Section>
 
 		<!-- CTA Section -->
 		<Section background="rose" padding="large">
 			<div class="mx-auto max-w-4xl">
-				<div class="rounded-3xl border border-rose-200 bg-white px-8 py-12 shadow-xl text-center">
-					<div class="mx-auto mb-6 inline-flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br from-rose-100 to-rose-50">
+				<div
+					class="rounded-3xl border border-rose-200 bg-white px-8 py-12 text-center shadow-xl"
+				>
+					<div
+						class="mx-auto mb-6 inline-flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br from-rose-100 to-rose-50"
+					>
 						<Calendar className="h-10 w-10 text-rose-600" />
 					</div>
-					<h2 class="font-serif text-4xl font-bold text-gray-900 mb-4">
+					<h2
+						class="mb-4 font-serif text-4xl font-bold text-gray-900"
+					>
 						Réservez votre date
 					</h2>
-					<p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-						Les créations florales pour mariages nécessitent du temps et de la préparation.
-						Contactez-nous dès maintenant pour discuter de votre projet.
+					<p class="mx-auto mb-8 max-w-2xl text-lg text-gray-600">
+						Les créations florales pour mariages nécessitent du
+						temps et de la préparation. Contactez-nous dès
+						maintenant pour discuter de votre projet.
 					</p>
-					<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+					<div
+						class="flex flex-col items-center justify-center gap-4 sm:flex-row"
+					>
 						<Button client:load size="lg">
 							Prendre rendez-vous
 						</Button>
@@ -268,7 +351,8 @@ const gallery = [
 						</Button>
 					</div>
 					<p class="mt-6 text-sm text-gray-500">
-						Nous recommandons de nous contacter 6 à 12 mois avant votre mariage
+						Nous recommandons de nous contacter 6 à 12 mois avant
+						votre mariage
 					</p>
 				</div>
 			</div>
